@@ -152,7 +152,7 @@ outputs:
 capabilities:
 
   endpoint:
-    value: { concat: [ "https://", { get_attribute: [ kube-master, ip ] }, ":6443/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy" ] }
+    value: { concat: [ "https://", { get_attribute: [ kube-master, ip ] }, ":6443" ] }
 
   node-endpoint:
     value: { get_attribute: [ kube-node, ip ] }
